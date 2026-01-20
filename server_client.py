@@ -23,7 +23,7 @@ def get_undelivered_for(client_id):
         if client_id in m["need_to_send"]:
             collected.append(f'from {m["from"]} : {m["text"]}')
             m["need_to_send"].remove(client_id)
-        return collected
+    return collected
             
 def client_processor(conn, client_id):
     

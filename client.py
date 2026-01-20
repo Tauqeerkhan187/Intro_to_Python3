@@ -27,9 +27,10 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         if not data:
             print("Server disconnected")
             break
-
+        
+        message_received = data.decode()
         print("Server answer: ", message_received)
 
-    s.close()
+        print("Server answer: ", message_received)
 
 print("Client finished")
